@@ -49,7 +49,10 @@ public class AFP : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        cube.Cube = false;
+        if (cube !=null)
+        {
+            cube.Cube = false;
+        }
         animator.SetBool("Launched?", false);
     }
 }
